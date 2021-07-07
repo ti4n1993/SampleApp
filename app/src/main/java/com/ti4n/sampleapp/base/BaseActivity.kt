@@ -5,8 +5,10 @@ import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
+import com.airbnb.mvrx.MavericksView
 
-open class BaseActivity<B : ViewDataBinding>(@LayoutRes layoutId: Int) : AppCompatActivity() {
+abstract class BaseActivity<B : ViewDataBinding>(@LayoutRes layoutId: Int) : AppCompatActivity(),
+    MavericksView {
 
     val dataBinding: B by lazy { DataBindingUtil.setContentView(this, layoutId) }
 
