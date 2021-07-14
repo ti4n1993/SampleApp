@@ -3,7 +3,7 @@ plugins {
     kotlin("android")
     kotlin("kapt")
     id("dagger.hilt.android.plugin")
-    kotlin("plugin.serialization") version "1.5.20"
+    kotlin("plugin.serialization") version "1.5.21"
 }
 
 android {
@@ -45,6 +45,10 @@ android {
     }
 }
 
+kapt{
+    correctErrorTypes = true
+}
+
 dependencies {
     kotlin()
     jetpack()
@@ -53,6 +57,8 @@ dependencies {
     dialog()
     kapt()
     test()
+    glide()
+    log()
 }
 
 fun DependencyHandler.jetpack() {
@@ -64,7 +70,7 @@ fun DependencyHandler.jetpack() {
     implementation(Libraries.fragmentKtx)
     implementation(Libraries.recyclerview)
     implementation(Libraries.room)
-    implementation(Libraries.livedataKtx)
+//    implementation(Libraries.livedataKtx)
     implementation(Libraries.viewModelKtx)
     implementation(Libraries.viewModelSavedState)
     implementation(Libraries.runtimeKtx)
@@ -82,11 +88,14 @@ fun DependencyHandler.epoxy() {
 fun DependencyHandler.kotlin() {
     implementation(Libraries.kotlinCoroutines)
     implementation(Libraries.kotlinSerialize)
+    implementation(Libraries.anko)
 }
 
 fun DependencyHandler.network() {
     implementation(Libraries.retrofit)
     implementation(Libraries.retrofitKS)
+    implementation(Libraries.okhttp)
+    implementation(Libraries.okhttpLogging)
 }
 
 fun DependencyHandler.dialog() {
@@ -106,4 +115,12 @@ fun DependencyHandler.test() {
     testImplementation(TestLibraries.kotlinCoroutinesTest)
     androidTestImplementation(InstrumentedTestLibraries.junit)
     androidTestImplementation(InstrumentedTestLibraries.espresso)
+}
+
+fun DependencyHandler.glide() {
+    implementation(Libraries.glide)
+}
+
+fun DependencyHandler.log() {
+    implementation(Libraries.timber)
 }

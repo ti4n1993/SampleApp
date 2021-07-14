@@ -1,10 +1,9 @@
-
 object Versions {
     // Build tools and SDK
     const val buildTools = "30.0.3"
     const val compileSdk = 30
     const val gradlePlugin = "7.1.0-alpha03"
-    const val kotlin = "1.5.20"
+    const val kotlin = "1.5.21"
     const val minSdk = 26
     const val targetSdk = 30
 
@@ -35,6 +34,7 @@ object Versions {
     const val converter = "0.8.0"
     const val glide = "4.12.0"
     const val dialog = "3.3.0"
+    const val timber = "4.7.1"
 
     // Instrumented testing libraries
     const val espresso = "3.4.0"
@@ -58,7 +58,7 @@ object Libraries {
         "androidx.constraintlayout:constraintlayout:${Versions.constraintlayout}"
     const val coreKtx = "androidx.core:core-ktx:${Versions.core}"
     const val material = "com.google.android.material:material:${Versions.material}"
-    const val room = "androidx.room:room-runtime:${Versions.room}"
+    const val room = "androidx.room:room-ktx:${Versions.room}"
     const val paging = "androidx.paging:paging-runtime:${Versions.paging}"
     const val dataStore = "androidx.datastore:datastore-preferences:${Versions.dataStore}"
     const val epoxy = "com.airbnb.android:epoxy:${Versions.epoxy}"
@@ -72,10 +72,13 @@ object Libraries {
         "org.jetbrains.kotlinx:kotlinx-serialization-json:${Versions.kotlinSerializable}"
     const val kotlinSerialize =
         "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.kotlinCoroutines}"
+    const val anko = "org.jetbrains.anko:anko-commons:${Versions.anko}"
     const val recyclerview = "androidx.recyclerview:recyclerview:${Versions.recyclerview}"
     const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
     const val retrofitKS =
         "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:${Versions.converter}"
+    const val okhttp = "com.squareup.okhttp3:okhttp:${Versions.okhttp}"
+    const val okhttpLogging = "com.squareup.okhttp3:logging-interceptor:${Versions.okhttp}"
     const val runtimeKtx = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifecycle}"
     const val livedataKtx = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.lifecycle}"
     const val viewModelKtx = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle}"
@@ -83,6 +86,8 @@ object Libraries {
         "androidx.lifecycle:lifecycle-viewmodel-savedstate:${Versions.lifecycle}"
     const val dialog = "com.afollestad.material-dialogs:core:${Versions.dialog}"
     const val dialogLifecycle = "com.afollestad.material-dialogs:lifecycle:${Versions.dialog}"
+    const val glide = "com.github.bumptech.glide:glide:${Versions.glide}"
+    const val timber = "com.jakewharton.timber:timber:${Versions.timber}"
 }
 
 object InstrumentedTestLibraries {
