@@ -30,13 +30,15 @@ object AppModule {
         .addInterceptor(HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY))
         .build()
 
+    private val json = Json {
+        ignoreUnknownKeys = true
+    }
+
     @Provides
     @Singleton
     fun apiService(okHttpClient: OkHttpClient) = Retrofit.Builder()
         .client(okHttpClient)
-        .addConverterFactory(Json {
-            ignoreUnknownKeys = true
-        }.asConverterFactory("application/json".toMediaType()))
+        .addConverterFactory(json.asConverterFactory("application/json".toMediaType()))
         .baseUrl(BaseUrl).build().create<ApiService>()
 
 //    @Provides
