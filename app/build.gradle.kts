@@ -45,7 +45,7 @@ android {
     }
 }
 
-kapt{
+kapt {
     correctErrorTypes = true
 }
 
@@ -59,68 +59,4 @@ dependencies {
     test()
     glide()
     log()
-}
-
-fun DependencyHandler.jetpack() {
-    implementation(Libraries.coreKtx)
-    implementation(Libraries.activity)
-    implementation(Libraries.appcompat)
-    implementation(Libraries.constraintlayout)
-    implementation(Libraries.material)
-    implementation(Libraries.fragmentKtx)
-    implementation(Libraries.recyclerview)
-    implementation(Libraries.room)
-//    implementation(Libraries.livedataKtx)
-    implementation(Libraries.viewModelKtx)
-    implementation(Libraries.viewModelSavedState)
-    implementation(Libraries.runtimeKtx)
-    implementation(Libraries.paging)
-    implementation(Libraries.dataStore)
-    implementation(Libraries.hilt)
-}
-
-fun DependencyHandler.epoxy() {
-    implementation(Libraries.epoxy)
-    implementation(Libraries.epoxyDatabinding)
-    implementation(Libraries.epoxyPaging)
-}
-
-fun DependencyHandler.kotlin() {
-    implementation(Libraries.kotlinCoroutines)
-    implementation(Libraries.kotlinSerialize)
-    implementation(Libraries.anko)
-}
-
-fun DependencyHandler.network() {
-    implementation(Libraries.retrofit)
-    implementation(Libraries.retrofitKS)
-    implementation(Libraries.okhttp)
-    implementation(Libraries.okhttpLogging)
-}
-
-fun DependencyHandler.dialog() {
-    implementation(Libraries.dialog)
-    implementation(Libraries.dialogLifecycle)
-}
-
-fun DependencyHandler.kapt() {
-    kapt(AnnotationProcessors.epoxy)
-    kapt(AnnotationProcessors.hilt)
-    kapt(AnnotationProcessors.room)
-    kapt(AnnotationProcessors.glide)
-}
-
-fun DependencyHandler.test() {
-    testImplementation(TestLibraries.junit)
-    testImplementation(TestLibraries.kotlinCoroutinesTest)
-    androidTestImplementation(InstrumentedTestLibraries.junit)
-    androidTestImplementation(InstrumentedTestLibraries.espresso)
-}
-
-fun DependencyHandler.glide() {
-    implementation(Libraries.glide)
-}
-
-fun DependencyHandler.log() {
-    implementation(Libraries.timber)
 }
