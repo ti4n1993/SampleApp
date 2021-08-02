@@ -6,23 +6,40 @@ fun DependencyHandler.jetpack() {
     implementation(Libraries.activity)
     implementation(Libraries.appcompat)
     implementation(Libraries.constraintlayout)
-    implementation(Libraries.material)
-    implementation(Libraries.fragmentKtx)
-    implementation(Libraries.recyclerview)
     implementation(Libraries.room)
 //    implementation(Libraries.livedataKtx)
     implementation(Libraries.viewModelKtx)
-    implementation(Libraries.viewModelSavedState)
-    implementation(Libraries.runtimeKtx)
     implementation(Libraries.paging)
     implementation(Libraries.dataStore)
     implementation(Libraries.hilt)
 }
 
-fun DependencyHandler.epoxy() {
-    implementation(Libraries.epoxy)
-    implementation(Libraries.epoxyDatabinding)
-    implementation(Libraries.epoxyPaging)
+fun DependencyHandler.compose() {
+    implementation("androidx.compose.ui:ui:${Versions.compose}")
+    // Tooling support (Previews, etc.)
+    implementation("androidx.compose.ui:ui-tooling:${Versions.compose}")
+    // Foundation (Border, Background, Box, Image, Scroll, shapes, animations, etc.)
+    implementation("androidx.compose.foundation:foundation:${Versions.compose}")
+    // Material Design
+    implementation("androidx.compose.material:material:${Versions.compose}")
+    // Material design icons
+    implementation("androidx.compose.material:material-icons-core:${Versions.compose}")
+    implementation("androidx.compose.material:material-icons-extended:${Versions.compose}")
+    implementation("androidx.navigation:navigation-compose:2.4.0-alpha05")
+}
+
+fun DependencyHandler.accompanist() {
+    implementation("com.google.accompanist:accompanist-pager:${Versions.accompanist}")
+    implementation("com.google.accompanist:accompanist-permissions:${Versions.accompanist}")
+    implementation("com.google.accompanist:accompanist-placeholder:${Versions.accompanist}")
+    implementation("com.google.accompanist:accompanist-flowlayout:${Versions.accompanist}")
+    implementation("com.google.accompanist:accompanist-insets:${Versions.accompanist}")
+    implementation("com.google.accompanist:accompanist-swiperefresh:${Versions.accompanist}")
+    implementation("com.google.accompanist:accompanist-systemuicontroller:${Versions.accompanist}")
+}
+
+fun DependencyHandler.coil() {
+    implementation("io.coil-kt:coil-compose:1.3.1")
 }
 
 fun DependencyHandler.kotlin() {
@@ -38,16 +55,9 @@ fun DependencyHandler.network() {
     implementation(Libraries.okhttpLogging)
 }
 
-fun DependencyHandler.dialog() {
-    implementation(Libraries.dialog)
-    implementation(Libraries.dialogLifecycle)
-}
-
 fun DependencyHandler.kapt() {
-    kapt(AnnotationProcessors.epoxy)
     kapt(AnnotationProcessors.hilt)
     kapt(AnnotationProcessors.room)
-    kapt(AnnotationProcessors.glide)
 }
 
 fun DependencyHandler.test() {
@@ -55,10 +65,6 @@ fun DependencyHandler.test() {
     testImplementation(TestLibraries.kotlinCoroutinesTest)
     androidTestImplementation(InstrumentedTestLibraries.junit)
     androidTestImplementation(InstrumentedTestLibraries.espresso)
-}
-
-fun DependencyHandler.glide() {
-    implementation(Libraries.glide)
 }
 
 fun DependencyHandler.log() {

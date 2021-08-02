@@ -41,7 +41,11 @@ android {
     }
 
     buildFeatures {
-        dataBinding = true
+        compose = true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = Versions.compose
     }
 }
 
@@ -52,11 +56,11 @@ kapt {
 dependencies {
     kotlin()
     jetpack()
-    epoxy()
     network()
-    dialog()
     kapt()
     test()
-    glide()
     log()
+    compose()
+    coil()
+    accompanist()
 }
