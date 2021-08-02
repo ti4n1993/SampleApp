@@ -2,23 +2,23 @@ object Versions {
     // Build tools and SDK
     const val buildTools = "30.0.3"
     const val compileSdk = 30
-    const val gradlePlugin = "7.1.0-alpha03"
+    const val gradlePlugin = "7.1.0-alpha05"
     const val kotlin = "1.5.21"
     const val minSdk = 26
     const val targetSdk = 30
 
     // jetpack
-    const val activity = "1.3.0-rc01"
+    const val activity = "1.3.0"
     const val appcompat = "1.4.0-alpha03"
-    const val constraintlayout = "2.1.0-beta02"
+    const val constraintlayout = "2.1.0"
     const val core = "1.6.0"
-    const val fragment = "1.4.0-alpha04"
+    const val fragment = "1.4.0-alpha05"
     const val lifecycle = "2.4.0-alpha02"
-    const val recyclerview = "1.2.0"
-    const val room = "2.4.0-alpha03"
+    const val recyclerview = "1.2.1"
+    const val room = "2.4.0-alpha04"
     const val material = "1.4.0"
-    const val paging = "3.1.0-alpha02"
-    const val dataStore = "1.0.0-rc01"
+    const val paging = "3.1.0-alpha03"
+    const val dataStore = "1.0.0-rc02"
 
     //kotlin
     const val kotlinCoroutines = "1.5.1"
