@@ -2,22 +2,22 @@ object Versions {
     // Build tools and SDK
     const val buildTools = "30.0.3"
     const val compileSdk = 30
-    const val gradlePlugin = "7.1.0-alpha05"
-    const val kotlin = "1.5.10"
+    const val gradlePlugin = "7.1.0-alpha07"
+    const val kotlin = "1.5.21"
     const val minSdk = 26
     const val targetSdk = 30
 
     // jetpack
-    const val activity = "1.3.0"
+    const val activity = "1.3.1"
     const val appcompat = "1.4.0-alpha03"
     const val constraintlayout = "1.0.0-beta02"
     const val core = "1.6.0"
     const val viewModel = "1.0.0-alpha07"
     const val room = "2.4.0-alpha04"
     const val paging = "1.0.0-alpha12"
-    const val dataStore = "1.0.0-rc02"
-    const val compose = "1.0.0"
-    const val accompanist = "0.15.0"
+    const val dataStore = "1.0.0"
+    const val compose = "1.1.0-alpha01"
+    const val accompanist = "0.16.0"
 
 
     //kotlin
@@ -27,7 +27,7 @@ object Versions {
 
 
     // Libraries
-    const val hilt = "2.37"
+    const val hilt = "2.38.1"
     const val retrofit = "2.9.0"
     const val okhttp = "4.9.1"
     const val converter = "0.8.0"

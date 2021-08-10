@@ -16,9 +16,14 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.ti4n.sampleapp.db.DataBase
 import com.ti4n.sampleapp.theme.AppTheme
+import dagger.hilt.android.AndroidEntryPoint
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,7 +52,8 @@ fun Count(viewModel: MainViewModel = viewModel()) {
     Text(text = count.toString())
 }
 
-class MainViewModel : ViewModel() {
+@HiltViewModel
+class MainViewModel @Inject constructor(private val dataBase: DataBase) : ViewModel() {
 
     val count = MutableStateFlow(0)
 

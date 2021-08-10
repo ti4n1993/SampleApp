@@ -6,6 +6,7 @@ import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFact
 import com.ti4n.sampleapp.BaseUrl
 import com.ti4n.sampleapp.DataBaseName
 import com.ti4n.sampleapp.api.ApiService
+import com.ti4n.sampleapp.db.DataBase
 //import com.ti4n.sampleapp.db.DataBase
 import dagger.Module
 import dagger.Provides
@@ -41,10 +42,10 @@ object AppModule {
         .addConverterFactory(json.asConverterFactory("application/json".toMediaType()))
         .baseUrl(BaseUrl).build().create<ApiService>()
 
-//    @Provides
-//    @Singleton
-//    fun database(@ApplicationContext context: Context) = Room.databaseBuilder(
-//        context,
-//        DataBase::class.java, DataBaseName
-//    ).build()
+    @Provides
+    @Singleton
+    fun database(@ApplicationContext context: Context) = Room.databaseBuilder(
+        context,
+        DataBase::class.java, DataBaseName
+    ).build()
 }

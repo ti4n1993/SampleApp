@@ -25,7 +25,7 @@ fun DependencyHandler.compose() {
     // Material design icons
     implementation("androidx.compose.material:material-icons-core:${Versions.compose}")
     implementation("androidx.compose.material:material-icons-extended:${Versions.compose}")
-    implementation("androidx.navigation:navigation-compose:2.4.0-alpha05")
+    implementation("androidx.navigation:navigation-compose:2.4.0-alpha06")
 }
 
 fun DependencyHandler.accompanist() {
@@ -36,6 +36,8 @@ fun DependencyHandler.accompanist() {
     implementation("com.google.accompanist:accompanist-insets:${Versions.accompanist}")
     implementation("com.google.accompanist:accompanist-swiperefresh:${Versions.accompanist}")
     implementation("com.google.accompanist:accompanist-systemuicontroller:${Versions.accompanist}")
+    implementation("com.google.accompanist:accompanist-navigation-animation:${Versions.accompanist}")
+    implementation("com.google.accompanist:accompanist-navigation-material:${Versions.accompanist}")
 }
 
 fun DependencyHandler.coil() {
