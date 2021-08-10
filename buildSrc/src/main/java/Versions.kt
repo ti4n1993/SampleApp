@@ -17,7 +17,7 @@ object Versions {
     const val paging = "1.0.0-alpha12"
     const val dataStore = "1.0.0"
     const val compose = "1.1.0-alpha01"
-    const val accompanist = "0.16.0"
+    const val accompanist = "0.16.1"
 
 
     //kotlin
